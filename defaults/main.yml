@@ -4,6 +4,8 @@
 strongswan_conn_default:
   auto: route
   authby: psk
+  type: tunnel
+  # mobike: "no"
   keyexchange: ikev2
   dpdaction: restart
   dpddelay: 30
