@@ -1,6 +1,6 @@
 # Ansible strongSwan Role
 
-An Ansible role for the configuration of strongSwan with support for Ubuntu.
+An Ansible role for the configuration of strongSwan with support for Ubuntu, EL.
 
 ## Requirements
 
