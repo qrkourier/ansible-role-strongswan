@@ -1,9 +1,12 @@
 galaxy_info:
-  author: sberlin
+  author: qrkourier
   description: Role to configure strongSwan IPSec service
   license: "license GPLv2"
   min_ansible_version: 2.4
   platforms:
+    - name: EL
+      versions:
+        - 7
     - name: Ubuntu
       versions:
         - 18
