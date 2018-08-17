@@ -12,5 +12,8 @@ galaxy_info:
         - 18
   galaxy_tags:
     - ipsec
+    - strongswan
+    - azure
+    - virtualwan
 
 dependencies: []
