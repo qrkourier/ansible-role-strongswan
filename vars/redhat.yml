@@ -1,0 +1,5 @@
+---
+# Redhat-specific vars file for strongswan
+
+strongswan_config_base: /etc/strongswan
+strongswan_netlink_conf_base: "{{strongswan_config_base}}"

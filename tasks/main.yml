@@ -5,6 +5,10 @@
   when:
     ansible_os_family == "Debian"
 
+- include: redhat.yml
+  when:
+    ansible_os_family == "RedHat"
+
 - include: plugin.yml
   loop: "{{ plugins }}"
   loop_control:

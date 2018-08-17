@@ -1,6 +1,22 @@
 ---
 # config-specific task file for strongswan
 
+- name: charon directory exists
+  file:
+    state: directory
+    path: "{{strongswan_netlink_conf_base}}/charon"
+    mode: 0755
+    owner: root
+    group: root
+    
+- name: Configure kernel-netlink settings
+  template:
+    src: kernel-netlink.conf.j2
+    dest: "{{strongswan_netlink_conf_base}}/charon/kernel-netlink.conf"
+    mode: 0755
+  notify:
+    restart strongswan
+
 - name: Create config and secrets fragment directories
   file:
     path: "{{ strongswan_config_base }}/{{ item }}"

@@ -2,7 +2,7 @@
 # defaults file for strongswan
 
 strongswan_conn_default:
-  auto: add
+  auto: route
   authby: psk
   keyexchange: ikev2
   dpdaction: restart
@@ -11,7 +11,15 @@ strongswan_conn_default:
     address: "%any"
   right:
     address: "%any"
+  fragmentation: "yes"
+  ike: aes192gcm16-aes128gcm16-prfsha256-ecp256-ecp521,aes192-sha256-modp3072,aes256-sha1-prfsha1-modp1024
+  esp: aes192gcm16-aes128gcm16-prfsha256-ecp256-modp3072,aes192-sha256-ecp256-modp3072
+  keyingtries: "%forever"
 
 strongswan_conn: []
+
+plugins: []
+
+mtu: 0
 
 strongswan_charondebug: "cfg 2, dmn 2, ike 2, net 0"
